@@ -1,7 +1,7 @@
 # docker-nginx-php7-fpm
 
 # Description
-* A Docker project initial created to work with Craft CMS 3
+* An Alpine based Docker project initial created to work with Craft CMS 3
 
 # Prerequisites
 * Docker
