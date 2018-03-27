@@ -61,7 +61,7 @@ RUN apk --no-cache upgrade \
 COPY files/supervisord.conf /etc/supervisord.conf
 
 RUN echo "upstream php { server 127.0.0.1:9000; }" > /etc/nginx/conf.d/upstream.conf
-COPY files/default /etc/nginx/conf.d/default.conf
+COPY files/default.conf /etc/nginx/conf.d/default.conf
 COPY files/nginx.conf /etc/nginx/nginx.conf
 
 #VOLUME /app
