@@ -33,6 +33,8 @@ RUN apk --no-cache upgrade \
         jpegoptim \
         optipng \
         gifsicle \
+        nodejs \
+        nodejs-npm \
         libwebp-tools \
         supervisor \
 #    && sed -i "s|;*date.timezone =.*|date.timezone = Europe/Oslo|i" /etc/php7/php.ini \
@@ -54,6 +56,7 @@ RUN apk --no-cache upgrade \
     && php composer-setup.php \
     && rm composer-setup.php \
     && mv composer.phar /usr/bin/composer \
+    && npm install -g svgo \
     && mkdir /app \
     && chown -R nobody:nobody /app \
     && rm -rf /var/cache/apk*
